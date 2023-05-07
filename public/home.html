@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Page</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-success">
+    <div class="container">
+        <h1 class="text-center">Login PANEL</h1>
+
+        <form>
+            <br />
+            Enter Email:
+            <input type="text" class="form-control" name="" id="email"><br />
+            Enter Password:
+            <input type="text" class="form-control" name="" id="pass"><br />
+            <br />
+            <button type="button" onclick="login()" class="form-control btn btn-primary"> Login </button>
+            <br>
+            <a href="signup">Don't have an account? </a>
+        </form>
+    </div>
+
+    <script>
+
+        let a = localStorage.getItem("abc");
+
+        if (a == "save password") {
+            window.location.href = "result";
+        }
+
+
+
+        function login() {
+
+
+
+            let email = document.getElementById("email").value;
+            let pass = document.getElementById("pass").value;
+
+            let email1 = localStorage.getItem("email1");
+            let pass1 = localStorage.getItem("pass1");
+
+            if (email == email1 && pass == pass1) {
+                window.location.href = "result";
+
+            } else {
+                alert("email and pass is incorrect")
+            }
+
+        }
+
+    </script>
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>

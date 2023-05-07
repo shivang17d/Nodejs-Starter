@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <h1> Welcome
+        <script>
+            document.write(localStorage.getItem("name1") + "!!")
+        </script>
+    </h1>
+    <h2> Your Details are
+    </h2>
+    <h3>
+        <script>
+            document.write("Name : " + localStorage.getItem("name1") + "<br>")
+            document.write("Age : " + localStorage.getItem("age1") + "<br>")
+            document.write("Address : " + localStorage.getItem("address1") + "<br>")
+            document.write("Email : " + localStorage.getItem("email1") + "<br>")
+            document.write("Password : " + localStorage.getItem("pass1") + "<br>")
+        </script>
+    </h3>
+
+
+    <script>
+        function clearcall() {
+            localStorage.clear();
+
+        }
+    </script>
+
+
+    <a href="/" onclick="clearcall()"> LOGOUT </a>
+
+</body>
+
+</html>
